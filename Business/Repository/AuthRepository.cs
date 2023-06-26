@@ -59,7 +59,7 @@ namespace Business.Repository
         public bool UserExists(string email)
         {
             var userMail=  _userRepository.GetUserByMail(email);
-            if (userMail != null)
+            if (userMail == null)
             {
                 return false;
             }
